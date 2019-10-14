@@ -6,6 +6,9 @@ public class Artikl {
     private String kod;
 
 
+    public Artikl() {
+
+    }
 
     public Artikl(String naziv, double cijena, String kod) {
         this.naziv = naziv;
