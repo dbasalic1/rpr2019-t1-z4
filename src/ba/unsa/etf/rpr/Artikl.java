@@ -5,6 +5,8 @@ public class Artikl {
     private double cijena;
     private String kod;
 
+
+
     public Artikl(String naziv, double cijena, String kod) {
         this.naziv = naziv;
         this.cijena = cijena;

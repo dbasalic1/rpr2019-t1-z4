@@ -12,4 +12,21 @@ public class Supermarket {
     public void dodajArtikl(Artikl a) {
         artikli[brojArtikala++] = a;
     }
+
+    public Artikl[] getArtikli() {
+        return artikli;
+    }
+
+    public Artikl izbaciArtiklSaKodom(String kod) {
+        Artikl x = new Artikl("bla", 120, "abc");
+        for(int i = 0; i < brojArtikala; i++) {
+            if(artikli[i].getKod().equals(kod)) {
+                Artikl temp = new Artikl(artikli[i].getNaziv(),artikli[i].getCijena(),artikli[i].getKod());
+                brojArtikala--;
+                artikli[i] = null;
+                return temp;
+            }
+        }
+        return x;
+    }
 }
