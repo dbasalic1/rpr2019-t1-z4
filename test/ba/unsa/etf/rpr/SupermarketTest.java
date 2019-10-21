@@ -16,10 +16,11 @@ class SupermarketTest {
     }
 
     @org.junit.jupiter.api.Test
-    void getArtikli() {
-    }
-
-    @org.junit.jupiter.api.Test
     void izbaciArtiklSaKodom() {
+        Supermarket s = new Supermarket();
+        s.dodajArtikl(new Artikl("a", 1, "1"));
+        s.dodajArtikl(new Artikl("b", 1, "2"));
+        Artikl a = s.izbaciArtiklSaKodom("2");
+        assertEquals("2", a.getKod());
     }
 }
